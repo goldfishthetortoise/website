@@ -11,8 +11,40 @@
   </head>
   <body class="mb-5">    
     <div class="mb-4" hx-get="/nav.html" hx-trigger="load"></div>
-    <div class="container">
-      <h1 class="text-center">Welcome</h1>
-    </div>
+      <div class="ShowOnMobile">
+        <div class="container">
+          <h1 class="text-center">Welcome</h1>
+          <h3 class="text-center">What are you here for?</h3>
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Buy a PC</h5>
+              <p class="card-text">Order a prebuilt or build your own custom pc from preselected parts. Alternatively, input a PCPP list or schedule a meeting to see whats best for you.</p>
+              <a href="/pcs/pcs.html" class="btn btn-danger">Browse PCs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="HideOnMobile">
+        desktop
+      </div>
   </body>
+  <style>
+    @media (max-width: 575.98px) {
+      .HideOnMobile {
+      display: none;
+      }
+      .ShowOnMobile {
+      display: initial;
+      }
+    }
+    @media (min-width: 576px) {
+      .HideOnMobile {
+      display: initial;
+      }
+      .ShowOnMobile {
+      display: none;
+      }
+    }
+  </style>
 </html>

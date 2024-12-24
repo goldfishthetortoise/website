@@ -11,82 +11,137 @@
   </head>
   <body class="mb-5">    
     <div class="mb-4" hx-get="/nav.html" hx-trigger="load"></div>
-      <div class="ShowOnMobile">
-        <div class="container">
-          <h1 class="text-center">Welcome</h1>
-          <h4 class="text-center">What are you here for?</h4>
-          <div class="mt-3 mx-3 row">
-            <div class="card bg-black">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Buy a PC</h5>
-                <p class="card-text">Order a prebuilt or build your own custom pc from preselected parts.</p>
-                <a href="/pcs/pcs.html" class="btn btn-danger">Browse PCs</a>
-              </div>
-            </div>  
-          </div>
-          <div class="mt-3 mx-3 row">
-            <div class="card bg-black">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Coding</h5>
-                <p class="card-text">Commission a project, get help with your own project, or find coding resources.</p>
-                <a href="/code/code.html" class="btn btn-danger">Get coding</a>
-              </div>
-            </div>  
-          </div>
-          <div class="mt-3 mx-3 row">
-            <div class="card bg-black">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">3D printing/modeling</h5>
-                <p class="card-text">Order a 3D print, get help with modeling your own prints, or find a good printer for you.</p>
-                <a href="/3d/3d.html" class="btn btn-danger">Get printing</a>
-              </div>
+    <div class="ShowOnMobile">
+      <div class="container">
+        <h1 class="text-center">Welcome</h1>
+        <h4 class="text-center">What are you here for?</h4>
+        <div class="mt-3 mx-3 row">
+          <div class="card bg-black">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Buy a PC</h5>
+              <p class="card-text">Order a prebuilt or build your own custom pc from preselected parts.</p>
+              <a href="/pcs/pcs.html" class="btn btn-danger">Browse PCs</a>
+            </div>
+          </div>  
+        </div>
+        <div class="mt-3 mx-3 row">
+          <div class="card bg-black">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coding</h5>
+              <p class="card-text">Commission a project, get help with your own project, or find coding resources.</p>
+              <a href="/code/code.html" class="btn btn-danger">Get coding</a>
+            </div>
+          </div>  
+        </div>
+        <div class="mt-3 mx-3 row">
+          <div class="card bg-black">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">3D printing/modeling</h5>
+              <p class="card-text">Order a 3D print, get help with modeling your own prints, or find a good printer for you.</p>
+              <a href="/3d/3d.html" class="btn btn-danger">Get printing</a>
             </div>
           </div>
-          <div class="mt-3 mx-3 row">
-            <div class="card bg-black">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">About me</h5>
-                <p class="card-text">About me, contact me, and other resources.</p>
-                <a href="about/mabout.html" class="btn btn-danger">Become a stalker</a>
-              </div>
-            </div>  
-          </div>
-          <div class="mt-3 mx-3 row">
-            <div class="card bg-black">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Other resources</h5>
-                <p class="card-text">Other resources and random stuff I put here.</p>
-                <a href="resources/resources.html" class="btn btn-danger">Resources</a>
-              </div>
-            </div>  
-          </div>
+        </div>
+        <div class="mt-3 mx-3 row">
+          <div class="card bg-black">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">About me</h5>
+              <p class="card-text">About me, contact me, and other resources.</p>
+              <a href="about/mabout.html" class="btn btn-danger">Become a stalker</a>
+            </div>
+          </div>  
+        </div>
+        <div class="mt-3 mx-3 row">
+          <div class="card bg-black">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Other resources</h5>
+              <p class="card-text">Other resources and random stuff I put here.</p>
+              <a href="resources/resources.html" class="btn btn-danger">Resources</a>
+            </div>
+          </div>  
         </div>
       </div>
-      <div class="HideOnMobile">
-        desktop
+    </div>
+    <div class="HideOnMobile">
+      <h1 class="text-center">Welcome</h1>
+      <h4 class="text-center">What are you here for?</h4>
+      <div class="a_large_page">
+        <div id="observed"></div>
+        <div class="enclose bordar black" id="bottomtoup">hello</div>
       </div>
+    </div>
   </body>
+  <script>
+    let callback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && mybutton.style.opacity == 0) {
+          mybutton.style.opacity = 0;
+        } else if (entry.isIntersecting && mybutton.style.opacity == 1) {
+          mybutton.style.opacity = 1;
+        } else if (!entry.isIntersecting && mybutton.style.opacity == 0) {
+          mybutton.style.opacity = 1;
+        } else if (!entry.isIntersecting && mybutton.style.opacity == 1) {
+          mybutton.style.opacity = 1;
+        }
+      });
+    };
+    const mybutton = document.getElementById("bottomtoup")
+    const observer = new IntersectionObserver(callback);
+    const observed = document.getElementById("observed");
+    observer.observe(observed);
+  </script>
   <style>
     @media (max-width: 575.98px) {
       .HideOnMobile {
-      display: none;
+        display: none;
       }
       .ShowOnMobile {
-      display: initial;
+        display: initial;
       }
     }
     @media (min-width: 576px) {
       .HideOnMobile {
-      display: initial;
+        display: initial;
       }
       .ShowOnMobile {
-      display: none;
+        display: none;
       }
+    }
+
+    .a_large_page {
+      background-color: #212529;
+      height: 2000px;
+      position: relative;
+    }
+
+    #observed {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 10px;
+      width: 100px;
+      z-index: -999;
+      color: white;
+    }
+
+    .enclose {
+      height: 40px;
+      width: 40px;
+      position: relative;
+      margin-left: 800px;
+      margin-top: 400px;
+      right: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      opacity: 0;
+      transition: opacity 1s linear;
     }
   </style>
 </html>

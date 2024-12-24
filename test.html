@@ -72,31 +72,24 @@
       <h4 class="text-center">What are you here for?</h4>
       <div class="a_large_page">
         <div id="observed"></div>
-        <div class="enclose bordar black" id="button">hello</div>
+        <div class="enclose bordar black" id="bottomtoup">hello</div>
       </div>
-      <div class="enclose bordar black" id="bottomtoup"></div>
     </div>
   </body>
   <script>
-    let callback = (entries, observer) => {
+    const callback = (entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && mybutton.style.opacity == 0) {
-          mybutton.style.opacity = 0;
-        } else if (entry.isIntersecting && mybutton.style.opacity == 1) {
-          mybutton.style.opacity = 1;
-        } else if (!entry.isIntersecting && mybutton.style.opacity == 0) {
-          mybutton.style.opacity = 1;
-        } else if (!entry.isIntersecting && mybutton.style.opacity == 1) {
-          mybutton.style.opacity = 1;
-        }
+        mybutton.style.opacity = entry.isIntersecting ? '0' : '1';
       });
-    };
-    const mybutton = document.getElementById("button")
-    const observer = new IntersectionObserver(callback);
-    const observed = document.getElementById("observed");
-    observer.observe(observed);
-  </script>
-  <style>
+      };
+      const mybutton = document.getElementById("bottomtoup");
+      const observed = document.getElementById("observed");
+      const observer = new IntersectionObserver(callback, {
+        threshold: 0.1 // Trigger when 10% of the observed element is visible
+      });
+      observer.observe(observed);
+    </script>
+    <style>
     @media (max-width: 575.98px) {
       .HideOnMobile {
         display: none;
@@ -122,21 +115,21 @@
 
     #observed {
       position: absolute;
-      bottom: 50;
+      top: 90px; /* Adjust for navbar height */
       left: 0;
       height: 10px;
       width: 100px;
       z-index: -999;
+      color: white;
     }
 
     .enclose {
       height: 40px;
       width: 40px;
-      position: relative;
-      margin-top: 100px;
-      text-align: center;
-      right: 0;
-      bottom: 0;
+      position: fixed; /* Fixed to the viewport */
+      bottom: 20px; /* Adjust to stay at the bottom */
+      right: 20px; /* Adjust to stay at the right */
+      display: flex;
       justify-content: center;
       align-items: center;
       color: white;

@@ -70,13 +70,38 @@
     <div class="HideOnMobile">
       <h1 class="text-center">Welcome</h1>
       <h4 class="text-center">What are you here for?</h4>
-      <div class="a_large_page">
-        <div id="observed"></div>
-        <div class="enclose bordar black" id="button">hello</div>
-      </div>
-      <div class="enclose bordar black" id="bottomtoup"></div>
+      <div id="observed"></div>
+      <hr style="color: black; border-width: 4px; opacity: 100%;">
+      <div class="container m-6" style="max-width: 898px;">
+        <div class="row">
+            <div class="col">
+                <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 150px; height: 250px; font-size: 36px;">
+                    row
+                </div>
+            </div>
+            <div class="col">
+                <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 700px;height: 150px;">
+                    row
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 350; height: 100px;">
+                            row
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 350px; height: 100px;">
+                            row
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+        </div>
+    <div class="enclose bordar black" id="bottomtoup"></div>
   </body>
+
   <script>
     let callback = (entries, observer) => {
       entries.forEach(entry => {
@@ -114,15 +139,9 @@
       }
     }
 
-    .a_large_page {
-      background-color: #212529;
-      height: 2000px;
-      position: relative;
-    }
-
     #observed {
       position: absolute;
-      bottom: 50;
+      top: 50px;
       left: 0;
       height: 10px;
       width: 100px;
@@ -133,8 +152,8 @@
       height: 40px;
       width: 40px;
       position: relative;
-      margin-top: 100px;
-      text-align: center;
+      padding-top: 0;
+      padding-left: 0;
       right: 0;
       bottom: 0;
       justify-content: center;

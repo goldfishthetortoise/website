@@ -71,27 +71,48 @@
       <h1 class="text-center">Welcome</h1>
       <h4 class="text-center">What are you here for?</h4>
       <div id="observed"></div>
-      <hr style="color: black; border-width: 4px; opacity: 100%;">
-      <div class="container m-6" style="max-width: 898px;">
+      <hr style="color: black; border-width: 3px; opacity: 100%;">
+      <br>
+      <div class="tooltip sm-12" style="width: 352px;">
+        <button type="button" class="tooltip btn btn-link" style="align-content: center; font-size: 18px;" onclick="document.getElementById('whatdoido').style.opacity = 100;">
+        I offer a variety (not really) of services!</button>
+      </div>
+      <div id="whatdoido" class="container sm-12" style="width: 400px; opacity: 0;">
+        <p style="text-align: center; font-size: 14px;">
+          <ul>
+            <li>I build and sell gaming computers;</li>
+            <li>I code;</li>
+            <li>And last but not least, I 3D model (and print).</li>
+          </ul>
+        </p>  
+      </div>
+      <p style="text-align: center; font-size: 18px;">Scroll down to learn more!</p>
+      <br>
+      <div id="enclose" class="container m-6" style="max-width: 850px;">
         <div class="row">
             <div class="col">
-                <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 150px; height: 250px; font-size: 36px;">
-                    row
+                <div class="row border border-black d-flex align-items-center justify-content-center" style="width: 150px; height: 250px; font-size: 32px;">
+                    <center>Buy a<br>gaming<br>PC</center>
                 </div>
             </div>
             <div class="col">
-                <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 700px;height: 150px;">
-                    row
+                <div class="row border border-black d-flex align-items-center justify-content-center" style="width: 700px;height: 150px; font-size: 18px;">
+                    <center>If you know what you want, buy a prebuilt gaming PC, or select the parts from our parts list, tailored to ensure compatibility. Alternatively, you can upload a PCPP list. If you dont know yet, schedule a meeting and we will figure it out.</center>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 350; height: 100px;">
-                            row
+                        <div class="row border border-black d-flex align-items-center justify-content-center" style="width: 475px; height: 100px;">
+                            <center style="font-size: 20px;">I know what I want:</center><br><a href="/pcs/prebuilts.html" class="btn btn-danger" style="width: 135px;">Buy prebuilt</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/pcs/custompcs.html" class="btn btn-danger" style="width: 135px;">Buy custom</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/pcs/pcpp.html" class="btn btn-danger" style="width: 135px;">Input PCPP</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="border border-primary d-flex align-items-center justify-content-center" style="width: 350px; height: 100px;">
-                            row
+                        <div class="row border border-black d-flex align-items-center justify-content-center" style="width: 225px; height: 100px;">
+                            <center style="font-size: 20px;">I don't know yet:</center>
+                            <a href="pcs/meeting.html" class="btn btn-danger" style="width: 200px;">Schedule a meeting</a>
                         </div>
                     </div>
                 </div>
@@ -149,8 +170,6 @@
     }
 
     .enclose {
-      height: 40px;
-      width: 40px;
       position: relative;
       padding-top: 0;
       padding-left: 0;
@@ -158,9 +177,31 @@
       bottom: 0;
       justify-content: center;
       align-items: center;
-      color: white;
       opacity: 0;
       transition: opacity 1s linear;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black; 
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+ 
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
     }
   </style>
 </html>

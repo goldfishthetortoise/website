@@ -79,6 +79,7 @@
       <h1 class="text-center">Welcome</h1>
       <h4 class="text-center">What are you here for?</h4>
       <div id="observed"></div>
+      <div id="observedone"></div>
       <hr style="color: black; border-width: 3px; opacity: 100%;">
       <br>
       <div class="container sm-12" style="width: 352px;">
@@ -115,7 +116,7 @@
       </div>
       <br>
       <hr style="color: black; border-width: 3px; opacity: 100%;">
-      <br>
+      <br><br>
       <div id="encloseone" class="container m-6" style="max-width: 838px;">
         <div class="row">
             <div class="col">
@@ -148,7 +149,7 @@
         </div>
       </div>
       <br><br>
-      <div id="enclosetwo" class="container m-6" style="max-width: 850px;">
+      <div id="enclosetwo" class="container m-6" style="max-width: 838px;">
         <div class="row">
             <div class="col">
                 <div class="row border border-black d-flex align-items-center justify-content-center" style="width: 150px; height: 250px; font-size: 32px;">
@@ -196,6 +197,14 @@
         } else if (!entry.isIntersecting && encloseone.style.opacity == 1) {
           encloseone.style.opacity = 1;
         }
+      });
+    };
+    const observer = new IntersectionObserver(callback);
+    const observed = document.getElementById("observed");
+    observer.observe(observed);
+
+    let callbackone = (entries, observerone) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting && enclosetwo.style.opacity == 0) {
           enclosetwo.style.opacity = 0;
         } else if (entry.isIntersecting && enclosetwo.style.opacity == 1) {
@@ -207,9 +216,10 @@
         }
       });
     };
-    const observer = new IntersectionObserver(callback);
-    const observed = document.getElementById("observed");
-    observer.observe(observed);
+    const observerone = new IntersectionObserver(callbackone);
+    const observedone = document.getElementById("observedone");
+    observerone.observe(observedone);
+
   </script>
   <style>
     @media (max-width: 575.98px) {
@@ -238,6 +248,16 @@
       z-index: -999;
     }
 
+    #observedone {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      height: 10px;
+      width: 100px;
+      z-index: -999;
+
+    }
+
     #encloseone {
       position: relative;
       padding-top: 0;
@@ -253,6 +273,10 @@
 
     #enclosetwo {
       position: relative;
+      padding-top: 0;
+      padding-left: 0;
+      right: 0;
+      bottom: 0;
       justify-content: center;
       align-items: center;
       opacity: 0;

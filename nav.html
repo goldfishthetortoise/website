@@ -1,147 +1,143 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.12/dist/htmx.min.js"></script>
-    </head>
-    <body>  
-      <div class="HideOnMobile">
-        <nav class="navbar sticky-top navbar-expand-lg bg-black">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img width="35" height="35" src="https://avatars.githubusercontent.com/u/191308838?s=400&u=fa1c3f5b739f93cbf6c6a6ef82a210d25719e681&v=4" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              &nbsp;&nbsp;
-              GoldfishtheTortoise
-            </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link active dropdown-toggle" href="/pcs/pcs.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Computers</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/pcs/pcs.html">Order a PC</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/pcs/prebuilts.html">Order a prebuilt PC</a></li>
-                    <li><a class="dropdown-item" href="/pcs/custompcs.html">Order a custom PC</a></li>
-                    <li><a class="dropdown-item" href="/pcs/meeting.html">Schedule a meeting</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item active dropdown">
-                  <a class="nav-link active dropdown-toggle" href="/code/code.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Code
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/code/code.html">Code help</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/code/commission.html">Commission a project</a></li>
-                    <li><a class="dropdown-item" href="/code/projects.html">My projects</a></li>
-                    <li><a class="dropdown-item" href="https://github.com/goldfishthetortoise">Github</a></li>
-                    <li><a class="dropdown-item" href="/code/cresources.html">Coding resources</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="/3d/3d.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        3D
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/3d/3d.html">3D printing/modeling</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/3d/order.html">Order a 3d print</a></li>
-                      <li><a class="dropdown-item" href="/3d/printers.html">My printers</a></li>
-                      <li><a class="dropdown-item" href="/3d/presources.html">3D resources</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/about/about.html">About me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/contact/contact.html">Contact me</a>
-                </li>  
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/resources/resources.html">Other resources</a>
-                </li>  
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search resources" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.12/dist/htmx.min.js"></script> 
+    <div class="HideOnMobile">
+      <nav class="navbar sticky-top navbar-expand-lg bg-black">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img width="35" height="35" src="https://avatars.githubusercontent.com/u/191308838?s=400&u=fa1c3f5b739f93cbf6c6a6ef82a210d25719e681&v=4" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            &nbsp;&nbsp;
+            GoldfishtheTortoise
+          </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="/pcs/pcs.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Computers</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/pcs/pcs.html">Order a PC</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/pcs/prebuilts.html">Order a prebuilt PC</a></li>
+                  <li><a class="dropdown-item" href="/pcs/custompcs.html">Order a custom PC</a></li>
+                  <li><a class="dropdown-item" href="/pcs/meeting.html">Schedule a meeting</a></li>
+                </ul>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link active dropdown-toggle" href="/code/code.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Code
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/code/code.html">Code help</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/code/commission.html">Commission a project</a></li>
+                  <li><a class="dropdown-item" href="/code/projects.html">My projects</a></li>
+                  <li><a class="dropdown-item" href="https://github.com/goldfishthetortoise">Github</a></li>
+                  <li><a class="dropdown-item" href="/code/cresources.html">Coding resources</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="/3d/3d.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  3D
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/3d/3d.html">3D printing/modeling</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/3d/order.html">Order a 3d print</a></li>
+                  <li><a class="dropdown-item" href="/3d/printers.html">My printers</a></li>
+                  <li><a class="dropdown-item" href="/3d/presources.html">3D resources</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/about/about.html">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact/contact.html">Contact me</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/resources/resources.html">Other resources</a>
+              </li>  
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search resources" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
           </div>
-        </nav>
-      </div>
-      <div class="ShowOnMobile">
-        <nav class="navbar sticky-top navbar-expand-lg bg-black">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img width="35" height="35" src="https://avatars.githubusercontent.com/u/191308838?s=400&u=fa1c3f5b739f93cbf6c6a6ef82a210d25719e681&v=4" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              &nbsp;&nbsp;
-              GoldfishtheTortoise
-            </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link active dropdown-toggle" href="/pcs/pcs.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Computers</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/pcs/pcs.html">Order a PC</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/pcs/prebuilts.html">Order a prebuilt PC</a></li>
-                    <li><a class="dropdown-item" href="/pcs/custompcs.html">Order a custom PC</a></li>
-                    <li><a class="dropdown-item" href="/pcs/meeting.html">Schedule a meeting</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item active dropdown">
-                  <a class="nav-link active dropdown-toggle" href="/code/code.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Code
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/code/code.html">Code help</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/code/commission.html">Commission a project</a></li>
-                    <li><a class="dropdown-item" href="/code/projects.html">My projects</a></li>
-                    <li><a class="dropdown-item" href="https://github.com/goldfishthetortoise">Github</a></li>
-                    <li><a class="dropdown-item" href="/code/cresources.html">Coding resources</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="/3d/3d.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        3D
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/3d/3d.html">3D printing/modeling</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/3d/order.html">Order a 3d print</a></li>
-                      <li><a class="dropdown-item" href="/3d/printers.html">My printers</a></li>
-                      <li><a class="dropdown-item" href="/3d/presources.html">3D resources</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link active dropdown-toggle" href="/about/mabout.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    About
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/about/about.html">About me</a></li>
-                    <li><a class="dropdown-item" href="/contact/contact.html">Contact me</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/resources/resources.html">Other resources</a>
-                </li>  
-              </ul>
-            </div>
+        </div>
+      </nav>
+    </div>
+    <div class="ShowOnMobile">
+      <nav class="navbar sticky-top navbar-expand-lg bg-black">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img width="35" height="35" src="https://avatars.githubusercontent.com/u/191308838?s=400&u=fa1c3f5b739f93cbf6c6a6ef82a210d25719e681&v=4" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            &nbsp;&nbsp;
+            GoldfishtheTortoise
+          </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="/pcs/pcs.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Computers</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/pcs/pcs.html">Order a PC</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/pcs/prebuilts.html">Order a prebuilt PC</a></li>
+                  <li><a class="dropdown-item" href="/pcs/custompcs.html">Order a custom PC</a></li>
+                  <li><a class="dropdown-item" href="/pcs/meeting.html">Schedule a meeting</a></li>
+                </ul>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link active dropdown-toggle" href="/code/code.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Code
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/code/code.html">Code help</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/code/commission.html">Commission a project</a></li>
+                  <li><a class="dropdown-item" href="/code/projects.html">My projects</a></li>
+                  <li><a class="dropdown-item" href="https://github.com/goldfishthetortoise">Github</a></li>
+                  <li><a class="dropdown-item" href="/code/cresources.html">Coding resources</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="/3d/3d.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  3D
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/3d/3d.html">3D printing/modeling</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/3d/order.html">Order a 3d print</a></li>
+                  <li><a class="dropdown-item" href="/3d/printers.html">My printers</a></li>
+                  <li><a class="dropdown-item" href="/3d/presources.html">3D resources</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="/about/mabout.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about/about.html">About me</a></li>
+                  <li><a class="dropdown-item" href="/contact/contact.html">Contact me</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/resources/resources.html">Other resources</a>
+              </li>  
+            </ul>
           </div>
-        </nav>
-      </div>
-    </body>  
+        </div>
+      </nav>
+    </div>
   <style>
     @media (max-width: 575.98px) {
       .HideOnMobile {

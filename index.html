@@ -8,6 +8,7 @@
     <title>GoldfishWebsite</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.12/dist/htmx.min.js"></script>
+    <script>$(document).load(() => new bootstrap.Tooltip($("[data-bs-toggle=tooltip]")));</script>
   </head>
   <body class="mb-5">    
     <div class="mb-4" hx-get="/nav.html" hx-trigger="load"></div>

@@ -8,8 +8,31 @@
     <title>GoldfishWebsite</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.12/dist/htmx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   </head>
   <body>    
-    <div class="mb-5" hx-get="/nav.html" hx-trigger="load"></div>
+    <div hx-get="/nav.html" hx-trigger="load">
+      <nav class="navbar sticky-top navbar-expand-lg bg-black"></nav>
+    </div>
+    <div class="container" style="height: 300px;">
+      <div class="row" style="height: 300px;">
+        <div class="box col d-flex">
+          <p style="text-align: center;">text</p>
+        </div>
+        <div class="box d-flex flex-column-reverse">
+          <center><a href="/pcs/prebuilts.html" class="btn btn-danger">Shop prebuilts</a></center>
+        </div>
+        <div class="box col d-flex">
+          <center>text</center>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    $(document).ready(() => {
+      const container = $("#cont").width();
+      const contwidth = container/3;
+      $(".box").width(contwidth);
+    });
+  </script>
 </html>

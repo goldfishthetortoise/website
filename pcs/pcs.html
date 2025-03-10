@@ -9,30 +9,64 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.12/dist/htmx.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <style>
+      .carousel-control-prev,
+      .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+        filter: invert(100%);
+
+      }
+      .carousel-inner {
+        height: 100%;
+      }
+      .carousel-item {
+        height: 100%;
+      }
+      .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .carousel-indicators {
+        filter: invert(100%);
+      }
+    </style>
   </head>
   <body>    
     <div hx-get="/nav.html" hx-trigger="load">
       <nav class="navbar sticky-top navbar-expand-lg bg-black"></nav>
     </div>
-    <div class="container" style="height: 300px;">
-      <div class="row" style="height: 300px;">
-        <div class="box col d-flex">
-          <p style="text-align: center;">text</p>
+    <div class="container" style="height: 400px; width: 900px;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 100%;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="box d-flex flex-column-reverse">
-          <center><a href="/pcs/prebuilts.html" class="btn btn-danger">Shop prebuilts</a></center>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color: white;">Small Form Factor</h5>
+              <p style="color: white;">Starting at [price], these builds are for those who want a compact yet powerful computer.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
         </div>
-        <div class="box col d-flex">
-          <center>text</center>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </body>
-  <script>
-    $(document).ready(() => {
-      const container = $("#cont").width();
-      const contwidth = container/3;
-      $(".box").width(contwidth);
-    });
-  </script>
 </html>

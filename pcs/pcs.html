@@ -44,7 +44,7 @@
       <nav class="navbar sticky-top navbar-expand-lg bg-black"></nav>
     </div>
     <div class="HideOnMobile">
-      <div class="container" style="height: 400px; width: 900px;">
+      <div class="container" style="height: 400px; width: 900px; margin-bottom: 20px;">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 100%;">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -91,12 +91,78 @@
       <br>
       <hr style="color: black; border-width: 3px; opacity: 100%;">
       <br><br>
-      <div data-aos="fade-down" data-aos-delay="500" class="container m-6">
-        <div class="row">
-          <div class="col border border-black d-flex align-items-center justify-content-center" style="height: 250px; width: 500px;">
-            <h3>test</h3>
+      <div data-aos="fade-down" data-aos-delay="500" class="container m-6 aos-init aos-animate">
+        <div class="row d-flex justify-content-center">
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center style="font-size: 24px;">Satisfaction Guaranteed</center>
+            <center style="font-size: 16px;">With free 1-year limited warranty, shipping protection, and tech support, we guarantee that you will get what you pay for.</center>
+          </div>
+          <div class="row" style="height: 250px; width: 125px;"></div>
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center>place sat review carousel here</center>
           </div>
         </div>
       </div>
+      <br><br><br><br>
+      <div data-aos="fade-down" class="container m-6 aos-init aos-animate">
+        <div class="row d-flex justify-content-center">
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center style="font-size: 24px;">Market graph carousel here</center>
+          </div>
+          <div class="row" style="height: 250px; width: 125px;"></div>
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center style="font-size: 24px;">Market Averaged Prices</center>
+            <center style="font-size: 16px;">We carefully monitor part prices, keeping our prices just over the market value (we do have to make money!). But don't worry - that extra money that you pay goes to other features!</center>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div data-aos="fade-down" class="container m-6 aos-init aos-animate">
+        <div class="row d-flex justify-content-center">
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center style="font-size: 24px;">Fast, Safe Shipping</center>
+            <center style="font-size: 16px;">Prebuilts ship the business day after an order, and custom builds ship 1-3 business days after. Double boxed, with plastic corners and foam padding, we guarantee your system arrives safely at your door or you money back*.</center>
+            <center style="font-size: 7px;">*Refund requires you to ship the broken system back to us. Postage will be paid for. US shipping only.</center>
+          </div>
+          <div class="row" style="height: 250px; width: 125px;"></div>
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center>Place safely delivered packages counter here + packaging pictures on carousel</center>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div data-aos="fade-down" class="container m-6 aos-init aos-animate">
+        <div class="row d-flex justify-content-center">
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center>place custom design carousel here</center>
+          </div>
+          <div class="row" style="height: 250px; width: 125px;"></div>
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; width: 400px;">
+            <center style="font-size: 24px;">Custom Designs and Colors</center>
+            <center style="font-size: 16px;">Connect with our team to get a custom design or wrapping on your build! Put anime splashes, video game characters, and much more on your case!*</center>
+            <center style="font-size: 7px;">*Only available on custom builds. Prices will vary with complexity. Builds with custom designs will have longer lead times.</center>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div data-aos="fade-down" class="container m-6 aos-init aos-animate">
+        <div class="row d-flex justify-content-center">
+          <div class="row border border-black border-2 d-flex align-items-center justify-content-center" style="height: 250px; max-width: 875px;">
+            <div class="row d-flex align-items-center justify-content-center" style="height: 250px; width: 200px;">
+              <center>Google review thingy goes here</center>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center" style="height: 250px; width: 675px;">
+              <center>actual reviews go here</center>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+    <div hx-get="/footer.html" hx-trigger="load">
+      <footer class="bg-black text-white text-center text-lg-start"></footer>
+    </div>
     </body>
+    <script>
+      AOS.init()
+    </script>
   </html>
